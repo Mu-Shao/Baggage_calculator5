@@ -1,0 +1,310 @@
+/*Media Queries*/
+@media(max-width:768px){
+    #description{
+        margin-bottom:10% !important;
+    }
+    #formInnerWrapper{
+        margin-top:5% !important;
+    }
+    .formInput{
+        margin-bottom:30% !important;
+    }
+    #materialForm{
+        margin-top:10% !important;
+    }
+    #formInnerWrapper1{
+        margin-top:5% !important;
+    }
+    .formInput1{
+        margin-bottom:30% !important;
+    }
+    #materialForm1{
+        margin-top:10% !important;
+    }
+}
+
+@media(max-width:480px){
+    .formInput{
+        margin-bottom:70% !important;
+    }
+}
+
+body{
+    background-color:#fff;
+    font-family: 'Lato', sans-serif;
+}
+.flatButton{
+    box-shadow: 0px 1px 3px 0px rgba(0,0,0,.4);
+    border:none;
+    text-align:center;
+    padding: 12px 28px;
+}
+.green{
+    background-color:#ffad00;
+}
+.fa-check{
+    float: right;
+    margin-left:85%;
+    position: absolute;
+    z-index:0;
+    transition: all .2s;
+    color: #1DE9B6 !important;
+}
+#formOutterWrapper{
+    margin-top:2%;
+    padding:0;
+}
+#formInnerWrapper{
+    /* margin-top:10px; */
+    background-color:#f5f5f5;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    border-radius: 2px;
+    height:350px;
+}
+#materialForm{
+    margin-top:7%;
+}
+#formOutterWrapper2{
+    margin-top:2%;
+    padding:0;
+}
+#formInnerWrapper2{
+    /* margin-top:10px; */
+    background-color:#f5f5f5;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    border-radius: 2px;
+    height:350px;
+}
+#materialForm2{
+    margin-top:7%;
+}
+
+#description{
+    margin-bottom:5%;
+}
+
+
+input, label{
+    display:block;
+}
+label{
+    color:#212121;
+    position:absolute;
+    font-size:20px;
+    font-weight:400;
+    transition: all .2s;
+    transform: translateY(-100%);
+}
+
+/* input{
+    margin-top:10px;
+} */
+.formInput{
+    background-color:transparent;
+    border-top:none;
+    border-left:none;
+    border-right:none;
+    border-bottom:2px solid #E1E1E1;
+    
+    width:100%;
+    margin-bottom:8%;
+    color:#8C8C8C;
+
+}
+
+input:focus{
+    outline:none;
+    color:#3498db;
+    border-bottom:2px solid #2980b9;
+    -webkit-transition:border-bottom .5s;
+    -moz-transition:border-bottom .5s;
+    -ms-transition:border-bottom .5s;
+     -o-transition:border-bottom .5s;
+        transition:border-bottom .5s;
+}
+.active{
+    transform:translateY(-200%);
+    font-size:14px;
+}
+
+#submit:hover{
+    background-color:#ffad00;
+}
+#close{
+    display:block;
+    position:absolute;
+    cursor:pointer;
+    left:5px;
+    z-index:999;
+    margin-right:0;
+    padding-right:0;
+    padding-left:0;
+    color:#ffffff;
+}
+#close:hover{
+    color:#c0392b;
+}
+/* 修改单选按钮的样式 */
+.form-group input[type="radio"] {
+    margin-right: 10px; /* 设置单选按钮与文本之间的右边距 */
+}
+
+/* 修改选中状态下的单选按钮样式 */
+.form-group input[type="radio"]:checked + label {
+    font-weight: bold; /* 设置选中状态下标签的字体加粗 */
+}
+
+/* 修改鼠标悬停在单选按钮时的样式 */
+.form-group input[type="radio"]:hover + label {
+    color: #007bff; /* 设置悬停状态下标签的字体颜色 */
+    cursor: pointer; /* 设置鼠标悬停时显示指针 */
+}
+#ishavesick{
+    padding-left: 50%;
+}
+
+
+h2 {
+    margin-top: 20px; /* 去掉默认的上边距 */
+}
+.result_table {
+    font-size: 16px;
+    border-collapse: separate;
+    border-spacing: 0 10px;
+  }
+
+  .result_table th,
+  .result_table td {
+    border: 1px solid #f2f2f2;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .result_table thead th {
+    background-color: #ffad00;
+    color: #212529;
+  }
+
+  .result_table tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  .result_table tbody tr:hover {
+    background-color: #e5e5e5;
+  }
+  .table th, .table td {
+    border-top: 1px solid #dee2e6;
+  }
+  .custom-btn {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+.custom-btn img {
+    width: 16px; /* 根据您的图像大小调整 */
+    height: 16px; /* 根据您的图像大小调整 */
+}
+
+.custom-btn:active,
+.custom-btn:focus {
+    outline: none; /* 移除点击时的边框 */
+}
+/* 弹框样式 */
+.modal {
+    display: none; /* 默认隐藏 */
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5); /* 半透明背景 */
+    overflow: auto;
+  }
+  
+  /* 弹框内容样式 */
+  .modal-content {
+    background-color: #fefefe;
+    margin: 10% auto; /* 居中显示 */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 100%;
+    max-width: 500px;
+    position: relative;
+  }
+  
+  /* 关闭按钮样式 */
+  .close {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    color: #aaa;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  /* 关闭按钮悬停样式 */
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  /* 按钮样式 */
+#openModal {
+    background-image: url('../img/area.png');
+    
+    background-size: cover; /* 调整背景图片的尺寸，使其填满按钮 */
+    color: transparent; /* 隐藏按钮文字 */
+    border: none; /* 移除按钮边框 */
+    width: 20px; /* 设置按钮宽度 */
+    height: 20px; /* 设置按钮高度 */
+    cursor: pointer; /* 设置光标为手型 */
+    border-radius: 5px; /* 设置按钮圆角 */
+    transition: opacity 0.3s ease; /* 添加过渡效果 */
+    margin-left: 90px;
+    transform: translateY(-110%);
+    position: absolute;
+}
+
+#openModal:hover {
+    background-color: #0056b3; /* 设置鼠标悬停时的背景颜色 */
+}
+.message-box {
+    display: none; /* 默认隐藏 */
+    position: fixed; /* 固定定位，覆盖在页面上 */
+    z-index: 1; /* 设置堆叠顺序，确保弹框在顶层 */
+    left: 0;
+    top: 0;
+    width: 100%; /* 宽度占满整个屏幕 */
+    height: 100%; /* 高度占满整个屏幕 */
+    overflow: auto; /* 当内容超出屏幕高度时，显示滚动条 */
+    background-color: rgba(0,0,0,0.4); /* 半透明黑色背景 */
+}
+
+.message-content {
+    background-color: #fefefe; /* 弹框内容区域白色背景 */
+    margin: 15% auto; /* 上下左右居中 */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* 弹框宽度为页面宽度的 80% */
+}
+/* 关闭按钮悬停样式 */
+.message_close:hover,
+.message_clos:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+.message_close {
+
+    top: 5px;
+    right: 5px;
+    color: #aaa;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-left: 99%;
+}

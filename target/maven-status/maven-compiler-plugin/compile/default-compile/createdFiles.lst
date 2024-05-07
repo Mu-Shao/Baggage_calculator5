@@ -1,0 +1,10 @@
+com\cug\baggage_calculator\vo\param\BaggageParam.class
+WebMvcConfig.class
+com\cug\baggage_calculator\vo\SpecialBaggageType.class
+com\cug\baggage_calculator\service\BaggageService.class
+com\cug\baggage_calculator\BaggageCalculatorApplication.class
+com\cug\baggage_calculator\vo\BaggageVo.class
+com\cug\baggage_calculator\vo\BaggageDetailVo.class
+com\cug\baggage_calculator\controller\BaggageController.class
+com\cug\baggage_calculator\service\Impl\BaggageServiceImpl.class
+com\cug\baggage_calculator\vo\Result.class

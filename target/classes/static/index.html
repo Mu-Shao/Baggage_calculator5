@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>国航行李计算器</title>
+	<link href="http://cdn.bootcss.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+
+	
+	<link rel="stylesheet" href="css/animate.min.css">
+	<link rel="stylesheet" href="css/materialFormStyles.css">
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,100,300' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
+	
+</head>
+<body>
+	<h2 class="container">国航行李托运计算器</h2>
+	<div class="htmleaf-container">
+		
+		<div class="container" id="formOutterWrapper2">
+	        <div class="container" id="formInnerWrapper2">
+				<form id="materialForm2" class="form" method="post" action="" role="form" autocomplete="off">
+					<div class="form-group">
+						<div class="col-xs-6">
+							<label class="labels" for="flightType">航线类型</label>
+							<select id="flightType" name="flightType" class="formInput" onchange="selectChange()" >
+								<option value="inland">国内航线</option>
+								<option value="outland">国际航线</option>
+								
+							</select>
+						</div>
+						<div class="col-xs-6">
+							<label class="labels" for="flightRegion"  >航线区域</label>
+							<!-- 显示弹框的图标 -->
+							<button id="openModal" src="img/massage.png">i</button>
+							<!-- 弹框 -->
+							<div id="myModal" class="modal">
+								<div class="modal-content">
+									<span class="close">&times;</span> <!-- 关闭按钮 -->
+									<p> <strong>区域一</strong>：<span>美洲（除美国/加拿大外）/加勒比海地区 => 欧洲/非洲/中东/亚洲/西南太平洋</span><br>
+										<strong>区域二</strong>：<span>欧洲/中东 => 非洲/亚洲/西南太平洋</span> |
+										<span>日本 => 西南太平洋</span> |
+										<span>日本/西南太平洋 => 亚洲（不含日本及西南太平洋）/非洲</span><br>
+										<strong>区域三</strong>：<span>加拿大 => 美洲（除美国/加拿大外）/加勒比海地区/欧洲/非洲/中东/亚洲/西南太平洋</span><br>
+										<strong>区域四</strong>：<span>美国（含夏威夷） => 美洲（除美国外）/加勒比海地区/欧洲/非洲/中东/亚洲/西南太平洋</span><br>
+										<strong>区域五</strong>：<span>非洲 => 亚洲（除日本外)之间航线</span> |
+										<span>欧洲 => 中东之间航线</span> |
+										<span>亚洲（除日本)内航线</span> |
+										<span>美洲（除美国/加拿大）及加勒比海地区内航线</span> |
+										<span>上述未列明的航线</span></p>
+								</div>
+							</div>
+							<select id="flightRegion" name="flightRegion" class="formInput" id="flightRegion" disabled="true" >
+								<option value="0" id="flightAreaOptionDefault">请选择</option>
+								<option value="1">区域一</option>
+								<option value="2">区域二</option>
+								<option value="3">区域三</option>
+								<option value="4">区域四</option>
+								<option value="5">区域五</option>
+								
+						
+							</select>
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="col-xs-6">
+							<label class="labels" for="cabinType">机舱类型</label>
+							<select id="cabinType" name="cabinType" class="formInput">
+								<option value="">请选择</option>
+                        <optgroup label="国内航线" id="inland">
+                            <option value="头等舱">头等舱</option>
+                            <option value="公务舱">公务舱</option>
+                            <option value="经济舱">经济舱</option>>
+                        </optgroup>
+                        <optgroup label="国际、地区航线" id="outland">
+                            <option value="头等、公务舱">头等、公务舱</option>
+                            <option value="悦享经济舱、超级经济舱">悦享经济舱、超级经济舱</option>
+                            <option value="经济舱（区域A）">经济舱（区域A）</option>
+                            <option value="经济舱（区域B）">经济舱（区域B）</option>
+                        </optgroup>
+							</select>
+						</div>
+						<div class="col-xs-6">
+							<label class="labels" for="passengerType">乘客类型</label>
+							<select id="passengerType" name="passengerType" class="formInput">
+								<option value="adult">成人票</option>
+								<option value="child">儿童票</option>
+								<option value="infant">婴儿票</option>
+								<!-- 添加更多选项根据您的需求 -->
+							</select>
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="col-xs-6">
+							<label class="labels" for="vipType">VIP类型</label>
+							<select  name="vipType" class="formInput"  disabled="false" id="vipType">
+								<option value="无">无</option>
+								<option value="凤凰知音白金卡">凤凰知音白金卡</option>
+								<option value="凤凰知音金卡、银卡">凤凰知音金卡、银卡</option>
+								<option value="星空联盟金卡">星空联盟金卡</option>
+								<!-- 添加更多选项根据您的需求 -->
+							</select>
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="col-xs-6">
+							<label class="labels" for="price" style="transform: translateY(-100%);">票价</label>
+							<input type="text" class="formInput" id="price" name="price" placeholder="请输入人民币">
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="col-xs-6">
+							<button type="button" class="btn btn-primary green flatButton" style="font-size: larger; color: black;" id="submit" onclick="calculate()"><strong>计算行李</strong></button>
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="col-xs-6">
+							<span class="ishavesick" ><input type="checkbox" name="disability" value="True" id="isDisability"> 是否残疾、伤、病</span>
+							
+						</div>
+					</div>
+				</form>
+				
+	        </div>
+			<!-- 弹框 -->
+			<div id="message-box" class="message-box">
+				<div class="message-content">
+					<span class="message_close">&times;</span> <!-- 关闭按钮 -->
+					<p id="message1"></p>
+				</div>
+			</div>
+	    </div>
+		
+		
+	</div>
+	<div class="htmleaf-container">
+		
+		<div class="container" id="formOutterWrapper">
+	        <div class="container" id="formInnerWrapper">
+				<form id="materialForm" class="form" method="post" action="" role="form" autocomplete="off">
+					<div class="result_table" style="margin-top: -49px;">
+						<input type="text" id="baggageSum" name="baggageSum" value="0" style="display: none;">
+						<table class="table result_table" id="baggageTable">
+							<thead>
+							  <tr>
+								<th style="width: 19%;">行李类型</th>
+								<th style="width: 19%;">长（厘米）</th>
+								<th style="width: 19%;">宽（厘米）</th>
+								<th style="width: 19%;">高（厘米）</th>
+								<th style="width: 19%;">重量（千克）</th>
+								<th style="width: 5px;">
+									<button type="button" class="custom-btn" id="addBtn">
+										<img src="img/plus.png" alt="Add">
+									</button>
+								</th>
+							  </tr>
+							</thead>
+							<tbody>
+								
+									<tr id="baggageRow" style="display: none;">
+										<td style="padding: 9px 5px">
+											<div class="layui-input-inline">
+												<select id="baggageType00" name="baggageType00" lay-filter="baggageType">
+													<option value="普通行李">普通行李</option>
+													<option value="手动轮椅">手动轮椅</option>
+													<option value="电动轮椅">电动轮椅</option>
+													<option value="婴儿车或摇篮">婴儿车或摇篮</option>
+													<option value="导盲犬">导盲犬</option>
+													<option value="骨灰">骨灰</option>
+													<option value="自行车">自行车</option>
+													<option value="皮划艇">皮划艇</option>
+													<option value="撑杆">撑杆</option>
+													<option value="睡袋">睡袋</option>
+													<option value="小型电器或仪器">小型电器或仪器</option>
+													<option value="可作为行李运输的枪支">可作为行李运输的枪支</option>
+													<option value="可作为行李运输的弹药">可作为行李运输的弹药</option>
+													<option value="小动物">小动物</option>
+												</select>
+											</div>
+										</td>
+										<td style="padding: 9px 5px">
+											<div class="layui-input-inline">
+												<input type="text" id="length00" name="length00" lay-verify="required|number|positive"
+													autocomplete="off" class="layui-input" value="0">
+											</div>
+										</td>
+										<td style="padding: 9px 5px">
+											<div class="layui-input-inline">
+												<input type="text" id="width00" name="width00" lay-verify="required|number|positive"
+													autocomplete="off" class="layui-input" value="0">
+											</div>
+										</td>
+										<td style="padding: 9px 5px">
+											<div class="layui-input-inline">
+												<input type="text" id="height00" name="height00" lay-verify="required|number|positive"
+													autocomplete="off" class="layui-input" value="0">
+											</div>
+										</td>
+										<td style="padding: 9px 5px">
+											<div class="layui-input-inline">
+												<input type="text" id="weight00" name="weight00" lay-verify="required|number|positive"
+													autocomplete="off" class="layui-input" value="0">
+											</div>
+										</td>
+										<td class="align-center">
+											<button type="button" class="custom-btn"
+												onclick="baggageRemove(this)">
+												<img src="img/xx.png" alt="minue">
+											</button>
+										</td>
+									</tr>
+								
+							</tbody>
+						  </table>
+						  
+					</div>
+						
+					
+					
+					
+				</form>
+				
+	        </div>
+	    </div>
+		
+		
+	</div>
+	<script>
+		// 获取弹框及关闭按钮
+		var modal = document.getElementById('myModal');
+		var btn = document.getElementById("openModal");
+		var closeBtn = document.getElementsByClassName("close")[0];
+
+		// 点击按钮打开弹框
+		btn.onmousemove = function() {
+			modal.style.display = "block";
+		}
+
+		// 点击关闭按钮或者弹框外部，关闭弹框
+		closeBtn.onclick = function() {
+			modal.style.display = "none";
+		}
+		message_close=document.getElementsByClassName('message_close')[0]
+		message_box=document.getElementById('message-box')
+		message_close.onclick = function() {
+			message_box.style.display = "none";
+		}
+
+
+	</script>
+	<script src="js/jquery-2.1.1.min.js"></script>
+	<script src="js/index.js"></script>
+	<script src="http://cdn.bootcss.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    	<script src="js/materialForm.js"></script>
+	<script src="js/calculate.js"></script>
+</body>
+</html>

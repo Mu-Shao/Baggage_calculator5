@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="5" passed="5">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Surefire suite" duration-ms="613" started-at="2024-04-28T01:53:29Z" finished-at="2024-04-28T01:53:30Z">
+    <groups>
+    </groups>
+    <test name="Surefire test" duration-ms="613" started-at="2024-04-28T01:53:29Z" finished-at="2024-04-28T01:53:30Z">
+      <class name="com.cug.baggage_calculator.service.Impl.BaggageServiceImplTest">
+        <test-method status="PASS" signature="testCalBaggagePrice(java.util.List)[pri:0, instance:com.cug.baggage_calculator.service.Impl.BaggageServiceImplTest@17550481]" name="testCalBaggagePrice" duration-ms="8" started-at="2024-04-28T09:53:29Z" data-provider="CalBaggagePrice" finished-at="2024-04-28T09:53:29Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[BaggageParam(flightType=国际航线, flightArea=1, seatType=头等、公务舱, peopleType=成人, vipType=凤凰知音白金卡, ticketPrice=4500.0, isDisability=否, normalBaggage=[BaggageVo(type=普通行李, length=20.0, width=20.0, height=20.0, weight=10.0)], specialBaggage=[BaggageVo(type=null, length=null, width=null, height=null, weight=null)]), BaggageParam(flightType=国内航线, flightArea=null, seatType=公务舱, peopleType=儿童票, vipType=星空联盟金卡, ticketPrice=1500.0, isDisability=否, normalBaggage=[BaggageVo(type=普通行李, length=30.0, width=30.0, height=30.0, weight=35.0)], specialBaggage=[BaggageVo(type=null, length=null, width=null, height=null, weight=null)]), BaggageParam(flightType=国内航线, flightArea=null, seatType=超级经济舱, peopleType=成人, vipType=普通会员, ticketPrice=700.0, isDisability=否, normalBaggage=[BaggageVo(type=小型电器或仪器, length=40.0, width=40.0, height=40.0, weight=45.0)], specialBaggage=[BaggageVo(type=null, length=null, width=null, height=null, weight=null)]), BaggageParam(flightType=国际航线, flightArea=3, seatType=经济舱（区域A）, peopleType=儿童票, vipType=星空联盟金卡, ticketPrice=1500.0, isDisability=否, normalBaggage=[BaggageVo(type=普通行李, length=30.0, width=30.0, height=30.0, weight=35.0)], specialBaggage=[BaggageVo(type=null, length=null, width=null, height=null, weight=null)]), BaggageParam(flightType=国际航线, flightArea=4, seatType=经济舱（区域B）, peopleType=成人, vipType=普通会员, ticketPrice=1500.0, isDisability=否, normalBaggage=[BaggageVo(type=小型电器或仪器, length=40.0, width=40.0, height=40.0, weight=32.0)], specialBaggage=[BaggageVo(type=null, length=null, width=null, height=null, weight=null)])]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCalBaggagePrice -->
+        <test-method status="PASS" signature="testCal_inland_normal(java.util.List)[pri:0, instance:com.cug.baggage_calculator.service.Impl.BaggageServiceImplTest@17550481]" name="testCal_inland_normal" duration-ms="1" started-at="2024-04-28T09:53:29Z" data-provider="CalBaggagePrice" finished-at="2024-04-28T09:53:29Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[BaggageParam(flightType=国际航线, flightArea=1, seatType=头等、公务舱, peopleType=成人, vipType=凤凰知音白金卡, ticketPrice=4500.0, isDisability=否, normalBaggage=[BaggageVo(type=普通行李, length=20.0, width=20.0, height=20.0, weight=10.0)], specialBaggage=[BaggageVo(type=null, length=null, width=null, height=null, weight=null)]), BaggageParam(flightType=国内航线, flightArea=null, seatType=公务舱, peopleType=儿童票, vipType=星空联盟金卡, ticketPrice=1500.0, isDisability=否, normalBaggage=[BaggageVo(type=普通行李, length=30.0, width=30.0, height=30.0, weight=35.0)], specialBaggage=[BaggageVo(type=null, length=null, width=null, height=null, weight=null)]), BaggageParam(flightType=国内航线, flightArea=null, seatType=超级经济舱, peopleType=成人, vipType=普通会员, ticketPrice=700.0, isDisability=否, normalBaggage=[BaggageVo(type=小型电器或仪器, length=40.0, width=40.0, height=40.0, weight=45.0)], specialBaggage=[BaggageVo(type=null, length=null, width=null, height=null, weight=null)]), BaggageParam(flightType=国际航线, flightArea=3, seatType=经济舱（区域A）, peopleType=儿童票, vipType=星空联盟金卡, ticketPrice=1500.0, isDisability=否, normalBaggage=[BaggageVo(type=普通行李, length=30.0, width=30.0, height=30.0, weight=35.0)], specialBaggage=[BaggageVo(type=null, length=null, width=null, height=null, weight=null)]), BaggageParam(flightType=国际航线, flightArea=4, seatType=经济舱（区域B）, peopleType=成人, vipType=普通会员, ticketPrice=1500.0, isDisability=否, normalBaggage=[BaggageVo(type=小型电器或仪器, length=40.0, width=40.0, height=40.0, weight=32.0)], specialBaggage=[BaggageVo(type=null, length=null, width=null, height=null, weight=null)])]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCal_inland_normal -->
+        <test-method status="PASS" signature="testCal_inland_special(java.util.List)[pri:0, instance:com.cug.baggage_calculator.service.Impl.BaggageServiceImplTest@17550481]" name="testCal_inland_special" duration-ms="0" started-at="2024-04-28T09:53:29Z" data-provider="CalBaggagePrice" finished-at="2024-04-28T09:53:29Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[BaggageParam(flightType=国际航线, flightArea=1, seatType=头等、公务舱, peopleType=成人, vipType=凤凰知音白金卡, ticketPrice=4500.0, isDisability=否, normalBaggage=[BaggageVo(type=普通行李, length=20.0, width=20.0, height=20.0, weight=10.0)], specialBaggage=[BaggageVo(type=null, length=null, width=null, height=null, weight=null)]), BaggageParam(flightType=国内航线, flightArea=null, seatType=公务舱, peopleType=儿童票, vipType=星空联盟金卡, ticketPrice=1500.0, isDisability=否, normalBaggage=[BaggageVo(type=普通行李, length=30.0, width=30.0, height=30.0, weight=35.0)], specialBaggage=[BaggageVo(type=null, length=null, width=null, height=null, weight=null)]), BaggageParam(flightType=国内航线, flightArea=null, seatType=超级经济舱, peopleType=成人, vipType=普通会员, ticketPrice=700.0, isDisability=否, normalBaggage=[BaggageVo(type=小型电器或仪器, length=40.0, width=40.0, height=40.0, weight=45.0)], specialBaggage=[BaggageVo(type=null, length=null, width=null, height=null, weight=null)]), BaggageParam(flightType=国际航线, flightArea=3, seatType=经济舱（区域A）, peopleType=儿童票, vipType=星空联盟金卡, ticketPrice=1500.0, isDisability=否, normalBaggage=[BaggageVo(type=普通行李, length=30.0, width=30.0, height=30.0, weight=35.0)], specialBaggage=[BaggageVo(type=null, length=null, width=null, height=null, weight=null)]), BaggageParam(flightType=国际航线, flightArea=4, seatType=经济舱（区域B）, peopleType=成人, vipType=普通会员, ticketPrice=1500.0, isDisability=否, normalBaggage=[BaggageVo(type=小型电器或仪器, length=40.0, width=40.0, height=40.0, weight=32.0)], specialBaggage=[BaggageVo(type=null, length=null, width=null, height=null, weight=null)])]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCal_inland_special -->
+        <test-method status="PASS" signature="testCal_outland_normal(java.util.List)[pri:0, instance:com.cug.baggage_calculator.service.Impl.BaggageServiceImplTest@17550481]" name="testCal_outland_normal" duration-ms="0" started-at="2024-04-28T09:53:30Z" data-provider="CalBaggagePrice" finished-at="2024-04-28T09:53:30Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[BaggageParam(flightType=国际航线, flightArea=1, seatType=头等、公务舱, peopleType=成人, vipType=凤凰知音白金卡, ticketPrice=4500.0, isDisability=否, normalBaggage=[BaggageVo(type=普通行李, length=20.0, width=20.0, height=20.0, weight=10.0)], specialBaggage=[BaggageVo(type=null, length=null, width=null, height=null, weight=null)]), BaggageParam(flightType=国内航线, flightArea=null, seatType=公务舱, peopleType=儿童票, vipType=星空联盟金卡, ticketPrice=1500.0, isDisability=否, normalBaggage=[BaggageVo(type=普通行李, length=30.0, width=30.0, height=30.0, weight=35.0)], specialBaggage=[BaggageVo(type=null, length=null, width=null, height=null, weight=null)]), BaggageParam(flightType=国内航线, flightArea=null, seatType=超级经济舱, peopleType=成人, vipType=普通会员, ticketPrice=700.0, isDisability=否, normalBaggage=[BaggageVo(type=小型电器或仪器, length=40.0, width=40.0, height=40.0, weight=45.0)], specialBaggage=[BaggageVo(type=null, length=null, width=null, height=null, weight=null)]), BaggageParam(flightType=国际航线, flightArea=3, seatType=经济舱（区域A）, peopleType=儿童票, vipType=星空联盟金卡, ticketPrice=1500.0, isDisability=否, normalBaggage=[BaggageVo(type=普通行李, length=30.0, width=30.0, height=30.0, weight=35.0)], specialBaggage=[BaggageVo(type=null, length=null, width=null, height=null, weight=null)]), BaggageParam(flightType=国际航线, flightArea=4, seatType=经济舱（区域B）, peopleType=成人, vipType=普通会员, ticketPrice=1500.0, isDisability=否, normalBaggage=[BaggageVo(type=小型电器或仪器, length=40.0, width=40.0, height=40.0, weight=32.0)], specialBaggage=[BaggageVo(type=null, length=null, width=null, height=null, weight=null)])]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCal_outland_normal -->
+        <test-method status="PASS" signature="testCal_outland_special(java.util.List)[pri:0, instance:com.cug.baggage_calculator.service.Impl.BaggageServiceImplTest@17550481]" name="testCal_outland_special" duration-ms="0" started-at="2024-04-28T09:53:30Z" data-provider="CalBaggagePrice" finished-at="2024-04-28T09:53:30Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[BaggageParam(flightType=国际航线, flightArea=1, seatType=头等、公务舱, peopleType=成人, vipType=凤凰知音白金卡, ticketPrice=4500.0, isDisability=否, normalBaggage=[BaggageVo(type=普通行李, length=20.0, width=20.0, height=20.0, weight=10.0)], specialBaggage=[BaggageVo(type=null, length=null, width=null, height=null, weight=null)]), BaggageParam(flightType=国内航线, flightArea=null, seatType=公务舱, peopleType=儿童票, vipType=星空联盟金卡, ticketPrice=1500.0, isDisability=否, normalBaggage=[BaggageVo(type=普通行李, length=30.0, width=30.0, height=30.0, weight=35.0)], specialBaggage=[BaggageVo(type=null, length=null, width=null, height=null, weight=null)]), BaggageParam(flightType=国内航线, flightArea=null, seatType=超级经济舱, peopleType=成人, vipType=普通会员, ticketPrice=700.0, isDisability=否, normalBaggage=[BaggageVo(type=小型电器或仪器, length=40.0, width=40.0, height=40.0, weight=45.0)], specialBaggage=[BaggageVo(type=null, length=null, width=null, height=null, weight=null)]), BaggageParam(flightType=国际航线, flightArea=3, seatType=经济舱（区域A）, peopleType=儿童票, vipType=星空联盟金卡, ticketPrice=1500.0, isDisability=否, normalBaggage=[BaggageVo(type=普通行李, length=30.0, width=30.0, height=30.0, weight=35.0)], specialBaggage=[BaggageVo(type=null, length=null, width=null, height=null, weight=null)]), BaggageParam(flightType=国际航线, flightArea=4, seatType=经济舱（区域B）, peopleType=成人, vipType=普通会员, ticketPrice=1500.0, isDisability=否, normalBaggage=[BaggageVo(type=小型电器或仪器, length=40.0, width=40.0, height=40.0, weight=32.0)], specialBaggage=[BaggageVo(type=null, length=null, width=null, height=null, weight=null)])]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCal_outland_special -->
+      </class> <!-- com.cug.baggage_calculator.service.Impl.BaggageServiceImplTest -->
+    </test> <!-- Surefire test -->
+  </suite> <!-- Surefire suite -->
+</testng-results>
