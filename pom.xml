@@ -16,7 +16,10 @@
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
-        <allure.version>2.29.0</allure.version>
+        <aspectj.version>1.8.10</aspectj.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+<!--        <allure.version>2.29.0</allure.version>-->
     </properties>
     <dependencies>
         <!-- Spring Web 依赖 -->
@@ -50,11 +53,11 @@
             <version>5.2.4</version>
         </dependency>
          <!--allure的testng插件-->
-        <dependency>
-            <groupId>ru.yandex.qatools.allure</groupId>
-            <artifactId>allure-testng-adaptor</artifactId>
-            <version>1.5.2</version>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>ru.yandex.qatools.allure</groupId>-->
+<!--            <artifactId>allure-testng-adaptor</artifactId>-->
+<!--            <version>1.5.2</version>-->
+<!--        </dependency>-->
     </dependencies>
     <build>   <!-- 项目构建 -->
     <plugins>
@@ -82,29 +85,48 @@
 <!--            </executions>-->
 <!--        </plugin>-->
         <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-surefire-plugin</artifactId>
-                <version>2.10</version>
-                <configuration>
-                    <!--设置参数命令行-->
-                    <argLine>
-                        -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
-                    </argLine>
-                    <systemPropertyVariables>
-                        <!--是否忽略html，解释见下图。与之后在reportNg报告上显示截图相关。当前已经使用allure了，这里可以直接去掉啦-->
-                        <org.uncommons.reportng.escape-output>false</org.uncommons.reportng.escape-output>
-                    </systemPropertyVariables>
-                    <!--测试失败后，是否忽略并继续测试-->
-                    <testFailureIgnore>true</testFailureIgnore>
-                    <argLine>
-                        -Dfile.encoding=UTF-8
-                    </argLine>
-
-                    <suiteXmlFiles>
-                        <!--代表的是要执行的测试套件名称-->
-                        <suiteXmlFile>src/test/testNG.xml</suiteXmlFile>
-                    </suiteXmlFiles>
-                </configuration>
+            <!-- maven-surefire-plugin 配合testng执行测试用例的maven插件 -->
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-surefire-plugin</artifactId>
+            <version>2.22.1</version>
+            <configuration>
+                <!-- 测试失败后，是否忽略并继续测试 -->
+                <testFailureIgnore>true</testFailureIgnore>
+                <suiteXmlFiles>
+                    <!-- testng配置文件名称 -->
+                    <suiteXmlFile>./src/test/testNG.xml</suiteXmlFile>
+                </suiteXmlFiles>
+                <!--设置参数命令行 -->
+                <argLine>
+                    <!-- UTF-8编码 -->
+                    -Dfile.encoding=UTF-8
+                    <!-- 配置拦截器 -->
+                    -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
+                </argLine>
+                <systemProperties>
+                    <property>
+                        <!-- 配置 allure 结果存储路径 -->
+                        <name>allure.results.directory</name>
+                        <value>${project.build.directory}/allure-results</value>
+                    </property>
+                </systemProperties>
+            </configuration>
+            <dependencies>
+                <!-- aspectjweaver maven坐标 -->
+                <dependency>
+                    <groupId>org.aspectj</groupId>
+                    <artifactId>aspectjweaver</artifactId>
+                    <version>${aspectj.version}</version>
+                </dependency>
+            </dependencies>
+        </plugin>
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-compiler-plugin</artifactId>
+            <configuration>
+                <source>8</source>
+                <target>8</target>
+            </configuration>
         </plugin>
     </plugins>
   </build>

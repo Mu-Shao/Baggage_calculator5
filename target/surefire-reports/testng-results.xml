@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="5" passed="5">
+<testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Surefire suite" duration-ms="613" started-at="2024-04-28T01:53:29Z" finished-at="2024-04-28T01:53:30Z">
+  <suite started-at="2024-05-08T00:57:24Z" name="Suite" finished-at="2024-05-08T00:57:25Z" duration-ms="1208">
     <groups>
     </groups>
-    <test name="Surefire test" duration-ms="613" started-at="2024-04-28T01:53:29Z" finished-at="2024-04-28T01:53:30Z">
+    <test started-at="2024-05-08T00:57:24Z" name="Test" finished-at="2024-05-08T00:57:25Z" duration-ms="1208">
       <class name="com.cug.baggage_calculator.service.Impl.BaggageServiceImplTest">
-        <test-method status="PASS" signature="testCalBaggagePrice(java.util.List)[pri:0, instance:com.cug.baggage_calculator.service.Impl.BaggageServiceImplTest@17550481]" name="testCalBaggagePrice" duration-ms="8" started-at="2024-04-28T09:53:29Z" data-provider="CalBaggagePrice" finished-at="2024-04-28T09:53:29Z">
+        <test-method signature="testCalBaggagePrice(java.util.List)[pri:0, instance:com.cug.baggage_calculator.service.Impl.BaggageServiceImplTest@af78c87]" started-at="2024-05-08T08:57:25Z" name="testCalBaggagePrice" data-provider="CalBaggagePrice" finished-at="2024-05-08T08:57:25Z" duration-ms="75" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -18,7 +18,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testCalBaggagePrice -->
-        <test-method status="PASS" signature="testCal_inland_normal(java.util.List)[pri:0, instance:com.cug.baggage_calculator.service.Impl.BaggageServiceImplTest@17550481]" name="testCal_inland_normal" duration-ms="1" started-at="2024-04-28T09:53:29Z" data-provider="CalBaggagePrice" finished-at="2024-04-28T09:53:29Z">
+        <test-method signature="testCal_inland_normal(java.util.List)[pri:0, instance:com.cug.baggage_calculator.service.Impl.BaggageServiceImplTest@af78c87]" started-at="2024-05-08T08:57:25Z" name="testCal_inland_normal" data-provider="CalBaggagePrice" finished-at="2024-05-08T08:57:25Z" duration-ms="2" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -29,7 +29,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testCal_inland_normal -->
-        <test-method status="PASS" signature="testCal_inland_special(java.util.List)[pri:0, instance:com.cug.baggage_calculator.service.Impl.BaggageServiceImplTest@17550481]" name="testCal_inland_special" duration-ms="0" started-at="2024-04-28T09:53:29Z" data-provider="CalBaggagePrice" finished-at="2024-04-28T09:53:29Z">
+        <test-method signature="testCal_inland_special(java.util.List)[pri:0, instance:com.cug.baggage_calculator.service.Impl.BaggageServiceImplTest@af78c87]" started-at="2024-05-08T08:57:25Z" name="testCal_inland_special" data-provider="CalBaggagePrice" finished-at="2024-05-08T08:57:25Z" duration-ms="1" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -40,7 +40,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testCal_inland_special -->
-        <test-method status="PASS" signature="testCal_outland_normal(java.util.List)[pri:0, instance:com.cug.baggage_calculator.service.Impl.BaggageServiceImplTest@17550481]" name="testCal_outland_normal" duration-ms="0" started-at="2024-04-28T09:53:30Z" data-provider="CalBaggagePrice" finished-at="2024-04-28T09:53:30Z">
+        <test-method signature="testCal_outland_normal(java.util.List)[pri:0, instance:com.cug.baggage_calculator.service.Impl.BaggageServiceImplTest@af78c87]" started-at="2024-05-08T08:57:25Z" name="testCal_outland_normal" data-provider="CalBaggagePrice" finished-at="2024-05-08T08:57:25Z" duration-ms="3" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -51,7 +51,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testCal_outland_normal -->
-        <test-method status="PASS" signature="testCal_outland_special(java.util.List)[pri:0, instance:com.cug.baggage_calculator.service.Impl.BaggageServiceImplTest@17550481]" name="testCal_outland_special" duration-ms="0" started-at="2024-04-28T09:53:30Z" data-provider="CalBaggagePrice" finished-at="2024-04-28T09:53:30Z">
+        <test-method signature="testCal_outland_special(java.util.List)[pri:0, instance:com.cug.baggage_calculator.service.Impl.BaggageServiceImplTest@af78c87]" started-at="2024-05-08T08:57:25Z" name="testCal_outland_special" data-provider="CalBaggagePrice" finished-at="2024-05-08T08:57:25Z" duration-ms="1" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -63,6 +63,6 @@
           </reporter-output>
         </test-method> <!-- testCal_outland_special -->
       </class> <!-- com.cug.baggage_calculator.service.Impl.BaggageServiceImplTest -->
-    </test> <!-- Surefire test -->
-  </suite> <!-- Surefire suite -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>
